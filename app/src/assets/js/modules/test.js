@@ -48,10 +48,27 @@ export default () => {
 
         // Start observing the target node for configured mutations
         observer2.observe(targetNode2, config2);
-        
-        window.addEventListener('locationchange', function () {
+    });
+    pollFor("#ROOT_RESPONSIVE_CONTAINER", _ => {
+        // Select the node that will be observed for mutations
+        const targetNode3 = document.querySelector('#ROOT_RESPONSIVE_CONTAINER');
+
+        // Options for the observer (which mutations to observe)
+        const config3 = {
+            attributes: true, childList: true
+        };
+
+        // Callback function to execute when mutations are observed
+        const callback3 = (mutationList, observer) => {
             priceDetection();
-        });
+            
+        };
+
+        // Create an observer instance linked to the callback function
+        const observer3 = new MutationObserver(callback3);
+
+        // Start observing the target node for configured mutations
+        observer3.observe(targetNode3, config3);
     });
 }
 function priceDetection(){

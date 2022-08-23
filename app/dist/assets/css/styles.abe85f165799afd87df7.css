@@ -1,0 +1,1 @@
+.dicounted{margin:0 5px}@media(max-width:767px){.dicounted{text-decoration:line-through}}.discountedPrice{color:#f66344;font-family:Tiempos Text,serif;font-size:21px;font-weight:400;line-height:30px}.oldPrice{text-decoration:line-through}@media(min-width:768px){.oldPrice{text-decoration:none}.currency,.discountedPrice,.discountPercentage{display:none}}
